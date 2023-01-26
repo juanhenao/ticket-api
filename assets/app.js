@@ -1,2 +1,3 @@
-import './styles/app.less';
-console.log('Hey');
+import './styles/app.scss';
+import 'bootstrap';
+import '@vuepic/vue-datepicker/dist/main.css';

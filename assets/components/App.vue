@@ -1,6 +1,6 @@
 <template>
     <div>Events</div>
-    <EventList />
+    <EventList :events="events" />
 </template>
 
 <script>
@@ -8,30 +8,16 @@ import EventList from "./EventList";
 
 export default {
     name: 'App',
-    components: {EventList},
+    components: { EventList },
     data: function () {
         return {
             events: []
         }
     },
-    mounted() {
-        const request = new Request('https://localhost/events', {method: 'GET'});
-
-        fetch(request)
-            .then((response) => {
-                if (response.status === 200) {
-                    console.log(response.json());
-                } else {
-                    throw new Error('Something went wrong on API server!');
-                }
-            })
-            .then((response) => {
-                console.debug(response);
-                // …
-            }).catch((error) => {
-            console.error(error);
-        });
-
+    mounted: async function() {
+        const response = await fetch('https://localhost/events');
+        const data = await response.json()
+        this.events = data;
     }
 }
 </script>

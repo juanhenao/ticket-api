@@ -18,7 +18,7 @@ Encore
      * ENTRY CONFIG
      *
      * Each entry will result in one JavaScript file (e.g. app.js)
-     * and one CSS file (e.g. app.less) if your JavaScript imports CSS.
+     * and one CSS file (e.g. app.scss) if your JavaScript imports CSS.
      */
     .addEntry('app', './assets/app.js')
     .addEntry('eventsApp', './assets/events-app.js')
@@ -54,8 +54,8 @@ Encore
         config.corejs = '3.23';
     })
 
-    // enables Less support
-    .enableLessLoader()
+    // enables scss support
+    .enableSassLoader()
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
