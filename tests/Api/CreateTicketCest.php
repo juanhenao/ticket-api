@@ -20,7 +20,7 @@ class CreateTicketCest
     {
         $I->haveHttpHeader('Content-Type', 'application/json');
         $I->haveHttpHeader('Accept', 'application/json');
-        $I->sendPost('/events/' .$this->eventId . '/tickets', [
+        $I->sendPost('api/v1/events/' .$this->eventId . '/tickets', [
             'barcode' => '11111111111',
             'name' => 'Tester',
             'lastname' => 'Test'
@@ -35,7 +35,7 @@ class CreateTicketCest
     {
         $I->haveHttpHeader('Content-Type', 'application/json');
         $I->haveHttpHeader('Accept', 'application/json');
-        $I->sendPost('/events/' .$this->eventId . '/tickets', [
+        $I->sendPost('api/v1/events/' .$this->eventId . '/tickets', [
             'barcode' => '11111111111',
             'lastname' => 'Test'
         ]);
@@ -49,7 +49,7 @@ class CreateTicketCest
     {
         $I->haveHttpHeader('Content-Type', 'application/json');
         $I->haveHttpHeader('Accept', 'application/json');
-        $I->sendPost('/events/0/tickets', [
+        $I->sendPost('api/v1/events/0/tickets', [
             'barcode' => '11111111111',
             'name' => 'Tester',
             'lastname' => 'Test'

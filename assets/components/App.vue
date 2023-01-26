@@ -15,7 +15,7 @@ export default {
         }
     },
     mounted: async function() {
-        const response = await fetch('https://localhost/events');
+        const response = await fetch('https://localhost/api/v1/events');
         const data = await response.json()
         this.events = data;
     }

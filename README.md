@@ -19,12 +19,12 @@ A basic Ticket API and Small Frontend
 
 ## Endpoints
 
-Path            | Method | Auth |Response               |Body
-----------------|--------|------|-----------------|-----
-/events	        |GET	 | no  | List of events
-/events/{id}	|GET	 | no  | {message: 'I\'m fine'}
-/events        	|POST	 | no  | Newly created event | Example: {"title": "Concert Shakira","date": "2023-01-21 10:01:19","city": "Frankfurt"}
-/events/{id}/tickets |GET	 | no  | Tickets of the given event 
+Path                         | Method | Auth |Response               |Body
+-----------------------------|--------|------|-----------------|-----
+/api/v1/events	             |GET	 | no  | List of events
+/api/v1/events/{id}	         |GET	 | no  | {message: 'I\'m fine'}
+/api/v1/events               |POST	 | no  | Newly created event | Example: {"title": "Concert Shakira","date": "2023-01-21 10:01:19","city": "Frankfurt"}
+/api/v1/events/{id}/tickets  |GET	 | no  | Tickets of the given event 
 
 ## Tests
 
@@ -37,7 +37,6 @@ This project use Codeception to test the API Endpoints. Run the tests locally wi
 * Create custom Response classes for common cases
 * Create Test database to avoid DB pollution
 * Unify name and firstname
-* Prefix API ULRs
 
 **Enjoy!**
 

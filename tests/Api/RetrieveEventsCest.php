@@ -19,7 +19,7 @@ class RetrieveEventsCest
     {
         $I->haveHttpHeader('Content-Type', 'application/json');
         $I->haveHttpHeader('Accept', 'application/json');
-        $I->sendGet('/events');
+        $I->sendGet('api/v1/events');
         $I->seeResponseCodeIsSuccessful();
         $I->seeResponseIsJson();
 
@@ -30,7 +30,7 @@ class RetrieveEventsCest
     {
         $I->haveHttpHeader('Content-Type', 'application/json');
         $I->haveHttpHeader('Accept', 'application/json');
-        $I->sendPost('/events/' .$this->eventId . '/tickets', [
+        $I->sendPost('api/v1/events/' .$this->eventId . '/tickets', [
             'barcode' => '11111111111',
             'lastname' => 'Test'
         ]);

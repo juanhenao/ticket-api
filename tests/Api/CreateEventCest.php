@@ -12,7 +12,7 @@ class CreateEventCest
     {
         $I->haveHttpHeader('Content-Type', 'application/json');
         $I->haveHttpHeader('Accept', 'application/json');
-        $I->sendPost('/events', [
+        $I->sendPost('api/v1/events', [
             'title' => 'Test',
             'date' => '2023-01-21 10:01:19',
             'city' => 'Test City'
@@ -27,7 +27,7 @@ class CreateEventCest
     {
         $I->haveHttpHeader('Content-Type', 'application/json');
         $I->haveHttpHeader('Accept', 'application/json');
-        $I->sendPost('/events', [
+        $I->sendPost('api/v1/events', [
             'wrong_name' => 'Test',
             'date' => '2023-01-21 10:01:19',
             'city' => 'Test City'

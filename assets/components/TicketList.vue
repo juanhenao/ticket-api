@@ -50,7 +50,7 @@ export default {
             };
 
             const request = new Request(
-                `https://localhost/events/${this.eventId}/tickets`,
+                `https://localhost/api/v1/events/${this.eventId}/tickets`,
                 {method: "POST", body: JSON.stringify(newTicket)}
             );
 

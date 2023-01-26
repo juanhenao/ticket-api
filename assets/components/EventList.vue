@@ -72,7 +72,7 @@ export default {
             };
 
             const request = new Request(
-                'https://localhost/events',
+                'https://localhost/api/v1/events',
                 {method: "POST", body: JSON.stringify(newEvent)}
             );
 
@@ -85,7 +85,7 @@ export default {
             this.newCity = '';
         },
         seeDetails: async function (event, id) {
-            const response = await fetch('https://localhost/events/' + id);
+            const response = await fetch('https://localhost/api/v1/events/' + id);
             const data = await response.json()
             this.eventDetails = data;
         }
